@@ -33,3 +33,33 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+//Options Page for Footer and Sticky Menu
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Navigation Menus',
+		'menu_title'	=> 'Navigation Menus',
+		'menu_slug' 	=> 'navigation-menus',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Footer',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'navigation-menus',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Sticky Menu',
+		'menu_title'	=> 'Sticky Menu',
+		'parent_slug'	=> 'navigation-menus',
+	));
+}
+
+//Register new menu 
+add_action( 'after_setup_theme', 'register_menu' );
+function register_menu() {
+	register_nav_menu( 'footer_menu', __( 'Footer Menu', 'theme-slug' ) );
+}
