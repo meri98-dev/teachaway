@@ -13,3 +13,6 @@
 @import "mixins";
 
 @import "fonts/fonts"; //<-------- Import Fonts
+
+@import "template/tefl";//<-------- Import SCSS for tefl template
+@import "template/header";

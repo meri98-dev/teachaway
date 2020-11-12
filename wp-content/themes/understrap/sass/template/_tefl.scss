@@ -1,0 +1,93 @@
+//Section Main Banner
+.main-banner {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin: 0 -15px;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .main-data {
+        text-align: left;
+        font-family: $mont-bold;
+        color: $white;
+        margin-bottom: 20%;
+
+        h1 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        @include media-breakpoint-up(sm) {
+            text-align: center;
+
+            h1 {
+                font-size: 42px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+//Section Univeristy Repeater
+.university-repeater {
+    flex-direction: column;
+    margin-top: -13em;
+
+    .university {
+
+        .data {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 1px 2px 2px 0px #f3f3f3;
+            border: .2px solid #f3f3f3;
+            border-bottom-left-radius: 1%;
+            border-bottom-right-radius: 1%;
+            margin-top: 2em;
+            background-color: $white;
+
+            .line {
+                width: 92%;
+                height: 5px;
+                position: absolute;
+                top: 0;
+                background-color: $havelock-blue;
+            }
+
+            img {
+                width: 70%;
+                align-self: center;
+                margin-top: 1em;
+            }
+
+            p {
+                text-align: center;
+                font-family: $mont-reg;
+                padding: 22px;
+                font-size: 14px;
+            }
+        }
+
+    }
+
+    div:nth-child(2) {
+        .data {
+            .line {
+                background-color: $ochre;
+            }
+        }
+    }
+}
