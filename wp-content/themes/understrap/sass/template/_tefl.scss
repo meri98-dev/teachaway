@@ -41,6 +41,8 @@
     }
 }
 
+
+
 //Section Univeristy Repeater
 .university-repeater {
     flex-direction: column;
@@ -90,6 +92,9 @@
     }
 }
 
+
+
+
 //About TEFL Section
 
 .about-tefl {
@@ -109,6 +114,8 @@
         }
 
         .paragraph-repeater {
+            padding: 10px;
+
             @include media-breakpoint-up(sm) {
                 padding: 0 183px;
             }
@@ -152,6 +159,8 @@
         }
     }
 }
+
+
 
 //Employers Section
 .employer-tefl {
@@ -205,6 +214,8 @@
 
 }
 
+
+
 //Courses Section
 @include media-breakpoint-down(md) {
     .no-padding {
@@ -229,6 +240,7 @@
 
         h1 {
             font-size: 24px;
+
             @include media-breakpoint-up(sm) {
                 font-size: 32px;
             }
@@ -238,15 +250,17 @@
     .row {
         margin: 0;
         margin-top: 50px;
-        @include media-breakpoint-down(sm){
-        	flex-direction: column-reverse;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column-reverse;
         }
 
         &.right-side {
             flex-direction: row-reverse;
-             @include media-breakpoint-down(sm){
-        	flex-direction: column-reverse;
-        }
+
+            @include media-breakpoint-down(sm) {
+                flex-direction: column-reverse;
+            }
         }
 
         @include media-breakpoint-down (md) {
@@ -295,7 +309,7 @@
             .buttons {
                 @include media-breakpoint-up(sm) {
                     flex-direction: row;
-                  
+
                     .cta-button {
                         padding: 7.5px 20px;
                         margin-right: 2em;
@@ -305,8 +319,9 @@
                         margin: 0;
                     }
                 }
-                @include media-breakpoint-down(sm){
-                	  align-items: flex-start;
+
+                @include media-breakpoint-down(sm) {
+                    align-items: flex-start;
                 }
             }
         }

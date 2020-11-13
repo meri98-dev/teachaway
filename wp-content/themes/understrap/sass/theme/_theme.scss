@@ -30,6 +30,7 @@ section {
         transition: all .3s ease;
         letter-spacing: 1px;
         text-decoration: none;
+        border-radius: 2%;
         font-family: $mont-bold;
 
         @include media-breakpoint-down(sm) {

@@ -22,6 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="container-fluid p-0">
 	<div class="row">
 		<div id="fullpage" class="col-12">
+			<!-- 	Start Main Banner Section  -->			
 			<?php $main_banner_image = get_field('background_image');?>
 			<section class="section main-banner" style="background-image: url('<?php echo $main_banner_image['url'];?>');">
 				<div class="row">
@@ -35,7 +36,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 			</section>
+			<!-- 	End Main Banner Section  -->		
 
+			<!-- 	Start University Section  -->			
 			<section class="university-repeater container-1000">
 				<div class="row">
 					<div class="col-12">
@@ -48,7 +51,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 												<?php $logo = get_sub_field('university_image'); 
 												$button_1= get_sub_field('button_1'); 
 												$button_2 = get_sub_field('button_2');?>
-
 												<img src="<?php echo $logo['url']; ?>" alt="" class="logo">
 												<p><?php the_sub_field('description'); ?></p>
 												<div class="buttons">
@@ -65,7 +67,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 			</section>
+			<!-- 	End University Section  -->	
 
+			<!-- 	Start About TEFL  Section  -->	
 			<section class="about-tefl container-1000">
 				<div class="row">
 					<div class="col-12">
@@ -102,7 +106,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 			</section>
+			<!-- 	End About TEFL  Section  -->	
 
+			<!-- 	Start Employers  Section  -->	
 			<section class="employer-tefl">
 				<div class="row">
 					<div class="col-12">
@@ -113,7 +119,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 				<div class="row">
 					<div class="col-12">
-
 						<div class="row images">
 							<?php while(have_rows('employers_repeater')): the_row();
 								$image = get_sub_field('image'); ?>
@@ -122,32 +127,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</div>
 							<?php endwhile;?>
 						</div>
-
 					</div>
 				</div>
 			</section>
+			<!-- 	Start Employers  Section  -->	
+
+
+			<!-- 	Start Courses  Section  -->	
 
 			<div class="courses container-fluid px-0">
 				<div class="row">
-					
-						<div class="section-title">
-							<h1><?php the_field('courses_tefl');?></h1>
-						</div>
-					
+					<div class="section-title">
+						<h1><?php the_field('courses_tefl');?></h1>
+					</div>	
 				</div>
 				<div class="row">
-		     		<div class="col-12">
-						
-					<?php 
+					<div class="col-12">				
+						<?php 
 						$count =0;
 						while(have_rows('courses_repeater')):the_row(); ?>
 							<div class="row <?php	if( $count % 2 == 1) { echo "right-side";} ?> mx-0"> 
 								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 px-0">
 									<?php $main_image = get_sub_field('main_image'); ?>
 									<div class="main-image">
-									<img class = "img-fluid w-100" src="<?php echo $main_image['url']; ?>" alt="">
-								<!-- <div class="main-image" style="background-image: url('<?php echo $main_image['url'];?>')";></div> -->
-								</div>
+										<img class = "img-fluid w-100" src="<?php echo $main_image['url']; ?>" alt="">
+										<!-- <div class="main-image" style="background-image: url('<?php echo $main_image['url'];?>')";></div> -->
+									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 second-col">
 									<?php $uni_image = get_sub_field('university_image'); ?>
@@ -170,6 +175,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 			</div>
 		</section>
+		<!-- 	End Courses  Section  -->	
+
 
 	</div><!-- #fullpage-->
 
