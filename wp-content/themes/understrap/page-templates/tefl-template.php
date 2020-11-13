@@ -92,10 +92,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 									</div>
 								</div>
 							<?php endwhile;?>
+							<div class="col-12">
+								<div class="notice">
+								<span class="notice_1"><?php the_field('notice_1')?></span> 
+								<span class ="notice_2"><a href=""><?php the_field('notice_2'); ?></a></span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+
+			
 
 		</div><!-- #fullpage-->
 

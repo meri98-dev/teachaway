@@ -136,4 +136,17 @@
             font-family: $mont-reg;
         }
     }
+
+    .notice {
+        text-align: center;
+        font-size: 14px;
+        font-family: $mont-reg;
+        font-style: italic;
+
+        .notice_2 {
+            a {
+                color: $apple;
+            }
+        }
+    }
 }
