@@ -94,8 +94,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php endwhile;?>
 							<div class="col-12">
 								<div class="notice">
-								<span class="notice_1"><?php the_field('notice_1')?></span> 
-								<span class ="notice_2"><a href=""><?php the_field('notice_2'); ?></a></span>
+									<span class="notice_1"><?php the_field('notice_1')?></span> 
+									<span class ="notice_2"><a href=""><?php the_field('notice_2'); ?></a></span>
 								</div>
 							</div>
 						</div>
@@ -103,7 +103,29 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 			</section>
 
-			
+			<section class="employer-tefl">
+				<div class="row">
+					<div class="col-12">
+						<div class="section-title">
+							<h1><?php the_field('employers_title');?></h1>	
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						
+						<div class="row images">
+							<?php while(have_rows('employers_repeater')): the_row();
+								$image = get_sub_field('image'); ?>
+								<div class="col-md-2 col-lg-2 col-xs-12 col-sm-12">
+									<img src="<?php echo $image ['url']; ?>" alt="">
+								</div>
+							<?php endwhile;?>
+						</div>
+						
+					</div>
+				</div>
+			</section>
 
 		</div><!-- #fullpage-->
 
