@@ -66,6 +66,37 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 			</section>
 
+			<section class="about-tefl container-1000">
+				<div class="row">
+					<div class="col-12">
+						<div class="about-data">
+							<h1><?php the_field('about_title'); ?></h1>
+							<div class="paragraph-repeater">
+								<?php while(have_rows('about_description')):the_row(); ?>
+									<p><?php the_sub_field('description_block'); ?></p>
+								<?php endwhile;?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="row">
+							<?php while(have_rows('about_repeater')):the_row();?>
+								<?php $image = get_sub_field('image');?>
+								<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+									<div class="about-repeater">
+										<img src="<?php echo $image['url'] ?>" alt="">
+										<h4><?php the_sub_field('title');?></h4>
+										<p><?php the_sub_field('description');?> </p>
+									</div>
+								</div>
+							<?php endwhile;?>
+						</div>
+					</div>
+				</div>
+			</section>
+
 		</div><!-- #fullpage-->
 
 	</div><!-- .row end -->

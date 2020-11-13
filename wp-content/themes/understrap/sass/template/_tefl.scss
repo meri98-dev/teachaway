@@ -54,13 +54,14 @@
             align-items: center;
             flex-direction: column;
             box-shadow: 1px 2px 2px 0px $white-smoke;
-            border: .2px solid $white-smoke; 
+            border: .2px solid $white-smoke;
             border-top: 5px solid $havelock-blue;
             border-bottom-left-radius: 1%;
             border-bottom-right-radius: 1%;
             margin-top: 2em;
             background-color: $white;
             height: 600px;
+
             img {
                 width: 70%;
                 align-self: center;
@@ -73,8 +74,8 @@
                 padding: 30px;
                 font-size: 14px;
 
-                @include media-breakpoint-up(sm){
-                	padding: 50px;
+                @include media-breakpoint-up(sm) {
+                    padding: 50px;
                 }
             }
         }
@@ -83,7 +84,56 @@
 
     div:nth-child(2) {
         .data {
-          border-top: 5px solid $ochre;
+            border-top: 5px solid $ochre;
+        }
+    }
+}
+
+//About TEFL Section
+
+.about-tefl {
+    flex-direction: column;
+    margin-top: 3em;
+
+    .about-data {
+        h1 {
+            font-size: 24px;
+            font-family: $mont-bold;
+            text-align: center;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 32px;
+            }
+        }
+
+        .paragraph-repeater {
+            @include media-breakpoint-up(sm) {
+                padding: 0 183px;
+            }
+
+            p {
+                font-size: 16px;
+                font-family: $mont-reg;
+
+            }
+        }
+
+    }
+
+    .about-repeater {
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+
+        h4 {
+            font-size: 20px;
+            font-family: $mont-bold;
+            margin: 1em 0;
+        }
+
+        p {
+            font-size: 14px;
+            font-family: $mont-reg;
         }
     }
 }

@@ -32,8 +32,8 @@ section {
         text-decoration: none;
         font-family: $mont-bold;
 
-        @include media-breakpoint-down(sm){
-            padding:  7.5px 30px;
+        @include media-breakpoint-down(sm) {
+            padding: 7.5px 30px;
         }
 
     }
@@ -47,10 +47,10 @@ section {
     }
 
     .cta-white {
-    	margin-top: 1em;
-        background-color: $primary; 
+        margin-top: 1em;
+        background-color: $primary;
         color: $grey;
-        border: 1.5px solid  $white-smoke;
+        border: 1.5px solid $white-smoke;
         box-shadow: 1px 2px 2px 0px $white-smoke;
     }
 }
