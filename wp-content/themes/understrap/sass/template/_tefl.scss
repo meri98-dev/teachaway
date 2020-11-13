@@ -161,14 +161,17 @@
     justify-content: center;
     background-color: $black-squeeze;
     flex-direction: column;
-	margin: 3em 0;
+    margin: 3em 0;
+
+
     .section-title {
         font-family: $mont-bold;
 
         h1 {
             font-size: 24px;
-			margin: 1em 0;
-			text-align: center;
+            margin: 1em 0;
+            text-align: center;
+
             @include media-breakpoint-up(sm) {
                 font-size: 32px;
             }
@@ -191,6 +194,7 @@
         img {
 
             width: 150px;
+
             @include media-breakpoint-up(sm) {
                 width: auto;
                 padding: 10px;
@@ -199,4 +203,98 @@
 
     }
 
+}
+
+//Courses Section
+@include media-breakpoint-down(md) {
+    .no-padding {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+}
+
+.courses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
+
+
+
+    .section-title {
+        font-size: 24px;
+        font-family: $mont-bold;
+        text-align: center;
+
+
+        @include media-breakpoint-up(sm) {
+            font-size: 32px;
+        }
+    }
+
+    .row {
+        margin: 0;
+        margin-top: 50px;
+
+        &.right-side {
+            flex-direction: row-reverse;
+        }
+
+        @include media-breakpoint-down (md) {
+            img {
+                margin-bottom: 2em;
+            }
+        }
+
+        .main-image {
+            flex-shrink: 0;
+            min-width: 100%;
+            min-height: 100%
+        }
+
+        .second-col {
+            padding: 0 50px;
+
+            .text-repeater {
+
+
+                @include media-breakpoint-up(sm) {
+                    padding: 50px 0;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-family: $mont-reg;
+
+                    @include media-breakpoint-up(sm) {
+                        padding: 20px 0;
+                    }
+
+                    i {
+                        color: $apple;
+                        font-size: 16px;
+                        margin-right: .5em;
+                    }
+                }
+            }
+
+            .buttons {
+                @include media-breakpoint-up(sm) {
+                    flex-direction: row;
+                    align-items: flex-start;
+
+                    .cta-button {
+                        padding: 7.5px 30px;
+                        margin-right: 2em;
+                    }
+
+                    .cta-white {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
 }
