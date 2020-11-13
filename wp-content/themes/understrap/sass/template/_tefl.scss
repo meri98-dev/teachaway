@@ -16,7 +16,7 @@
         text-align: left;
         font-family: $mont-bold;
         color: $white;
-        margin-bottom: 20%;
+        margin-bottom: 76%;
 
         h1 {
             font-size: 32px;
@@ -28,6 +28,7 @@
 
         @include media-breakpoint-up(sm) {
             text-align: center;
+            margin-bottom: 10%;
 
             h1 {
                 font-size: 42px;
@@ -43,7 +44,7 @@
 //Section Univeristy Repeater
 .university-repeater {
     flex-direction: column;
-    margin-top: -13em;
+    margin-top: -21em;
 
     .university {
 
@@ -52,21 +53,14 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            box-shadow: 1px 2px 2px 0px #f3f3f3;
-            border: .2px solid #f3f3f3;
+            box-shadow: 1px 2px 2px 0px $white-smoke;
+            border: .2px solid $white-smoke; 
+            border-top: 5px solid $havelock-blue;
             border-bottom-left-radius: 1%;
             border-bottom-right-radius: 1%;
             margin-top: 2em;
             background-color: $white;
-
-            .line {
-                width: 92%;
-                height: 5px;
-                position: absolute;
-                top: 0;
-                background-color: $havelock-blue;
-            }
-
+            height: 600px;
             img {
                 width: 70%;
                 align-self: center;
@@ -76,8 +70,12 @@
             p {
                 text-align: center;
                 font-family: $mont-reg;
-                padding: 22px;
+                padding: 30px;
                 font-size: 14px;
+
+                @include media-breakpoint-up(sm){
+                	padding: 50px;
+                }
             }
         }
 
@@ -85,9 +83,7 @@
 
     div:nth-child(2) {
         .data {
-            .line {
-                background-color: $ochre;
-            }
+          border-top: 5px solid $ochre;
         }
     }
 }

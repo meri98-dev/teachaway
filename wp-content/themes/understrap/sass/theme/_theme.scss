@@ -32,21 +32,25 @@ section {
         text-decoration: none;
         font-family: $mont-bold;
 
+        @include media-breakpoint-down(sm){
+            padding:  7.5px 30px;
+        }
+
     }
 
     .cta-green {
 
         background-color: $apple;
-        color: $white;
+        color: $primary;
         border: 1.5px solid $apple;
-        box-shadow: 1px 2px 2px 0px #f3f3f3;
+        box-shadow: 1px 2px 2px 0px $white-smoke;
     }
 
     .cta-white {
     	margin-top: 1em;
-        background-color: $white; 
-        color: $boulder;
-        border: 1.5px solid  #f3f3f3;
-        box-shadow: 1px 2px 2px 0px #f3f3f3;
+        background-color: $primary; 
+        color: $grey;
+        border: 1.5px solid  $white-smoke;
+        box-shadow: 1px 2px 2px 0px $white-smoke;
     }
 }

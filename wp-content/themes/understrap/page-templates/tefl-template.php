@@ -45,7 +45,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<div class="university">
 										<div class="col-12">
 											<div class="data">
-												<span class= "line"></span>
 												<?php $logo = get_sub_field('university_image'); 
 												$button_1= get_sub_field('button_1'); 
 												$button_2 = get_sub_field('button_2');?>
