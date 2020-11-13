@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php endif; ?>
 
 
-<div class="container-fluid">
+<div class="container-fluid p-0">
 	<div class="row">
 		<div id="fullpage" class="col-12">
 			<?php $main_banner_image = get_field('background_image');?>
@@ -129,11 +129,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="courses container-fluid px-0">
 				<div class="row">
-					<div class="col-12">
+					
 						<div class="section-title">
 							<h1><?php the_field('courses_tefl');?></h1>
 						</div>
-					</div>
+					
 				</div>
 				<div class="row">
 		     		<div class="col-12">

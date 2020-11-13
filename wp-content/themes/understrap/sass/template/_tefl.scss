@@ -224,22 +224,29 @@
 
 
     .section-title {
-        font-size: 24px;
         font-family: $mont-bold;
         text-align: center;
 
-
-        @include media-breakpoint-up(sm) {
-            font-size: 32px;
+        h1 {
+            font-size: 24px;
+            @include media-breakpoint-up(sm) {
+                font-size: 32px;
+            }
         }
     }
 
     .row {
         margin: 0;
         margin-top: 50px;
+        @include media-breakpoint-down(sm){
+        	flex-direction: column-reverse;
+        }
 
         &.right-side {
             flex-direction: row-reverse;
+             @include media-breakpoint-down(sm){
+        	flex-direction: column-reverse;
+        }
         }
 
         @include media-breakpoint-down (md) {
@@ -255,7 +262,12 @@
         }
 
         .second-col {
-            padding: 0 50px;
+            @include media-breakpoint-up(sm) {
+                .uni-image {
+                    max-width: 70%;
+                    padding-left: 15px;
+                }
+            }
 
             .text-repeater {
 
@@ -283,16 +295,18 @@
             .buttons {
                 @include media-breakpoint-up(sm) {
                     flex-direction: row;
-                    align-items: flex-start;
-
+                  
                     .cta-button {
-                        padding: 7.5px 30px;
+                        padding: 7.5px 20px;
                         margin-right: 2em;
                     }
 
                     .cta-white {
                         margin: 0;
                     }
+                }
+                @include media-breakpoint-down(sm){
+                	  align-items: flex-start;
                 }
             }
         }
