@@ -48,7 +48,7 @@
     flex-direction: column;
     margin-top: -21em;
     min-height: 60vh;
-    
+
     .university {
 
         .data {
@@ -398,7 +398,7 @@
     }
 }
 
-.bottom-information-section{
+.bottom-information-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -406,26 +406,27 @@
     flex-direction: column;
     margin-top: 2em;
 
-    .bottom-text-1{
+    .bottom-text-1 {
         font-family: $mont-reg;
         font-size: 14px;
     }
 
-    .bottom-text-2{
+    .bottom-text-2 {
         font-family: $mont-bold;
         font-size: 16px;
 
-        .bottom-text-3{
-            a{
+        .bottom-text-3 {
+            a {
                 font-family: $mont-reg;
                 text-decoration: none;
                 color: $black;
 
-                &:hover{
-                    color: $apple;                }
+                &:hover {
+                    color: $apple;
                 }
             }
         }
-
-
     }
+
+
+}

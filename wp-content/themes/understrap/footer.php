@@ -27,7 +27,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="row top-footer">
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<h5><?php the_field('latest_post_text','options'); ?></h5>
+
 							<div class="slick-slider">
+								
 								<?php
 								$args = array(
 									'post_type' => 'post'
@@ -51,25 +54,57 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						</div>
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
-							
+							<h5><?php the_field('about_menu_name','options'); ?></h5>
 
-							<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
-
-							</div>
-							<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
-
+							<div class="footer-menu">
+								<?php wp_nav_menu( array( 'theme_location' => 'footer_menu') ); ?>
 							</div>
 						</div>
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="col-12">
+								<div class="location">
+									<h5><?php the_field('get_in_touch_text','options'); ?></h5>
+									<p><?php the_field('location','options'); ?></p>
+								</div>
 
-					</footer><!-- #colophon -->
+							</div>
+							<div class="col-12">
+								<h5><?php the_field('also_seen_on_text','options'); ?></h5>
+							</div>
+							<div class="col-12">
+								<div class="row icons">
+									<?php while(have_rows('image_repeater','options')):the_row();
+										$image = get_sub_field('image','options'); ?>	
+										<div class="col-4">
+											<img src="<?php echo $image['url'] ?>" alt="">
+										</div>
+									<?php endwhile;?>
+								</div>
+							</div>
+						</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
 
-				</div><!--col end -->
+						<div class="col-12">
+							<h5><?php the_field('contacts_text','options'); ?></h5>
+						</div>
+						<?php while(have_rows('contacts','options')):the_row(); ?>
+							<ul class="locations">
+								<li><a href="<?php the_sub_field('link');?>"><?php the_sub_field('location');?></a></li>
 
-			</div><!-- row end -->
+							</ul>
+						<?php endwhile; ?>
+					</div>
+		</div>
 
-		</div><!-- container end -->
+	</footer><!-- #colophon -->
 
-	</div><!-- wrapper end -->
+</div><!--col end -->
+
+</div><!-- row end -->
+
+</div><!-- container end -->
+
+</div><!-- wrapper end -->
 
 </div><!-- #page we need this extra closing tag here -->
 

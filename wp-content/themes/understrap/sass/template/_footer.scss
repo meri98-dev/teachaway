@@ -1,4 +1,49 @@
-#wrapper-footer{
-	background-color: $blue-dianne;
-	color: $white;
+#wrapper-footer {
+    background-color: $blue-dianne;
+    color: $primary;
+
+    .top-footer {
+        h5 {
+            font-family: $mont-reg;
+            font-weight: 500;
+        }
+
+        .slick-slider {
+            .slick-item {
+                h5 {
+                    $font-family: $mont-light;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .footer-menu {
+            margin-top: .5em;
+
+            .menu-footer-menu-container {
+                #menu-footer-menu {
+                    list-style: none;
+                    padding: 0;
+
+                    .menu-item {
+                        a {
+                            text-decoration: none;
+                            font-family: $mont-light;
+                            font-size: 14px;
+                            line-height: 19px;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .icons {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+
+        }
+    }
 }
