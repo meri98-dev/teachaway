@@ -19,6 +19,12 @@ section {
     margin-top: 0 !important;
 }
 
+.fixed-mobile-menu{
+    @include media-breakpoint-up(sm){
+        display: none;
+    }
+}
+
 .buttons {
     margin-bottom: 2em;
     display: flex;

@@ -1,3 +1,11 @@
+.slick-slider {
+    .slick-item {
+        p {
+            font-family: $mont-light;
+            font-size: 14px;
+        }
+    }
+}
 .slick-prev {
     position: absolute;
     top: -23px;
@@ -8,7 +16,7 @@
     position: absolute;
     top: -23px;
 
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
         right: 50px;
     }
 }

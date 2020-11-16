@@ -110,7 +110,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php $second_logo = get_field('footer_second_logo','options'); ?>
 							<img src="<?php echo $second_logo['url']; ?>" alt="" class="footer-second-logo">
 						</div>
-					</div>
+					</div> <!-- bottom-footer -->
+
+					<div class=" row fixed-mobile-menu">
+						<div class="col-12">
+							<div class="row">
+								<div class="fixed-bottom-menu mobile-menu">
+									<?php while(have_rows('menu_repeater','options')):the_row(); ?>
+										<div class="col-3">
+											<div class="item">
+												<?php $small_logo = get_sub_field('image','options'); ?>
+												<img src="<?php echo $small_logo['url']; ?>" alt="">
+												<span><a href="<?php the_sub_field('link','options'); ?>"></a><?php the_sub_field('text','options'); ?></span>
+											</div>
+										</div>
+									<?php endwhile;?>
+								</div>
+							</div>
+						</div>
+					</div> <!-- fixed-menu -->
 
 				</footer><!-- #colophon -->
 
