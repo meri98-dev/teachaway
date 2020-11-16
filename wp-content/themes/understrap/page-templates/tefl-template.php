@@ -53,10 +53,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 												$button_2 = get_sub_field('button_2');?>
 												<img src="<?php echo $logo['url']; ?>" alt="" class="logo">
 												<p><?php the_sub_field('description'); ?></p>
-												<div class="buttons">
-													<a class="cta-button cta-green" href="<?php echo $button_1['cta_link']  ?>"><?php echo $button_1['cta_text']  ?></a>
-													<a class="cta-button cta-white" href="<?php echo $button_2['cta_link']  ?>"><?php echo $button_2['cta_text']  ?></a>
-												</div>
+												<?php get_template_part( 'partials/partial', 'button'); ?>
 											</div>
 										</div>
 										
@@ -162,10 +159,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 											<p><i class = "fa fa-check"></i><?php the_sub_field('text');?></p>
 										<?php endwhile; ?>
 									</div>
-									<div class="buttons">
-										<a class="cta-button cta-green" href="<?php echo $button_1['cta_link']  ?>"><?php echo $button_1['cta_text']  ?></a>
-										<a class="cta-button cta-white" href="<?php echo $button_2['cta_link']  ?>"><?php echo $button_2['cta_text']  ?></a>
-									</div>
+									<?php get_template_part( 'partials/partial', 'button'); ?>
 								</div>
 							</div>
 							<?php
@@ -174,9 +168,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 			</div>
-			
-			<!-- 	End Courses  Section  -->	
 
+			<!-- 	End Courses  Section  -->	
+			<!-- Start Testimonials Section -->
 			<section class="testimonials-tefl">
 				<div class="row">
 					<div class="col-12">
@@ -198,6 +192,43 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 			</section>
+			<!-- End Testimonials Section -->
+
+
+			<!-- 	Start University Section  -->			
+			<section class="university-repeater container-1000 end-page">
+				<div class="row">
+					<div class="col-12">
+						<div class="row">
+							<?php while(have_rows('university_repeater')):the_row();?>
+								<div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 col-xs-12">
+									<div class="university">
+										<div class="col-12">
+											<div class="data">
+												<?php $logo = get_sub_field('university_image'); ?>
+												<img src="<?php echo $logo['url']; ?>" alt="" class="logo">
+												<p><?php the_sub_field('description'); ?></p>
+												<?php get_template_part( 'partials/partial', 'button'); ?>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							<?php endwhile;?>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12">
+						<div class="bottom-information-section">
+							<p class = "bottom-text-1"><?php the_field('bottom_text_1'); ?></p>
+							<p class = "bottom-text-2 "><?php the_field('bottom_text_2')?> <span class = "bottom-text-3"><a href=""><?php the_field('bottom_text_3');?></a></span></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- 	End University Section  -->	
 
 
 		</div><!-- #fullpage-->

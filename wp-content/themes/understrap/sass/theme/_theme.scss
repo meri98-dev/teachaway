@@ -15,6 +15,10 @@ section {
     display: flex;
 }
 
+.end-page {
+    margin-top: 0 !important;
+}
+
 .buttons {
     margin-bottom: 2em;
     display: flex;
@@ -29,8 +33,10 @@ section {
         transition: all .3s ease;
         letter-spacing: 1px;
         text-decoration: none;
-        border-radius: 2%;
         font-family: $mont-bold;
+        box-shadow: 1px 2px 2px 0px $gainsboro;
+        border-radius: 5px;
+
 
         @include media-breakpoint-down(sm) {
             padding: 7.5px 30px;
@@ -43,14 +49,14 @@ section {
         background-color: $apple;
         color: $primary;
         border: 1.5px solid $apple;
-        box-shadow: 1px 2px 2px 0px $white-smoke;
+
     }
 
     .cta-white {
         margin-top: 1em;
         background-color: $primary;
         color: $grey;
-        border: 1.5px solid $white-smoke;
-        box-shadow: 1px 2px 2px 0px $white-smoke;
+        border: 1.5px solid $gainsboro;
+
     }
 }
