@@ -1,18 +1,22 @@
 .slick-prev {
     position: absolute;
-
     top: -23px;
-    left: 230px
+    left: 207px
 }
 
 .slick-next {
     position: absolute;
     top: -23px;
+
+    @include media-breakpoint-down(sm){
+        right: 50px;
+    }
 }
 
 .slick-arrow.slick-prev:before {
     display: block;
     font-size: 25px;
+    font-weight: 800;
     font-family: 'FontAwesome';
     content: "\f104";
 }
@@ -20,6 +24,7 @@
 .slick-arrow.slick-next:before {
     display: block;
     font-size: 25px;
+    font-weight: 800;
     font-family: 'FontAwesome';
     content: "\f105";
 }

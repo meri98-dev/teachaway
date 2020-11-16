@@ -4,14 +4,14 @@
 
     .top-footer {
         h5 {
-            font-family: $mont-reg;
+            font-family: $mont-bold;
             font-weight: 500;
         }
 
         .slick-slider {
             .slick-item {
-                h5 {
-                    $font-family: $mont-light;
+                p{
+                    font-family: $mont-light;
                     font-size: 14px;
                 }
             }
@@ -43,7 +43,58 @@
             justify-content: left;
             align-items: center;
 
+            img{
+                @include media-breakpoint-down(sm){
+                    width: 50px;
+                }
+            }
+            
+        }
+
+
+        .locations {
+
+            list-style: none;
+            font-family: $mont-light;
+            padding: 0;
+
+            li {
+                a {
+                    text-decoration: none;
+                }
+            }
 
         }
     }
+
+    .bottom-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 20vh;
+
+        .main-footer-logo {
+            @include media-breakpoint-down(sm){
+                width: 150px;
+            }
+        }
+
+        .copyright-text {
+            font-size: 10px;
+            line-height: 15px;
+            font-family: $mont-light;
+            margin-top: 2em;
+        }
+
+        .footer-second-logo {
+            width: 150px;
+            @include media-breakpoint-up(sm) {
+                width: 200px;
+                position: absolute;
+                bottom: -8px;
+
+            }
+        }
+    }
+
 }
