@@ -307,7 +307,7 @@
             }
 
             .buttons {
-                @include media-breakpoint-up(sm) {
+                @include media-breakpoint-up(md) {
                     flex-direction: row;
 
                     .cta-button {
@@ -324,6 +324,74 @@
                     align-items: flex-start;
                 }
             }
+        }
+    }
+}
+
+//Testimonial top: TEFL
+
+.testimonials-tefl {
+    background-color: $black-squeeze;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+
+
+    img {
+        margin-left: 3em;
+        @include media-breakpoint-up(sm) {
+            position: absolute;
+            right: 0;
+            padding: 10px;
+            margin-left: 0;
+        }
+
+    }
+
+    .testimonial-information {
+        width: 500px;
+
+        @include media-breakpoint-down(md) {
+            width: 400px;
+            padding: 20px 75px;
+        }
+
+
+        p {
+            font-family: $mont-reg;
+            font-size: 24px;
+            position: relative;
+
+            &::before {
+                content: "\f10d";
+                font-family: "FontAwesome";
+                position: absolute;
+                top: -9px;
+                left: -33px;
+
+            }
+
+            &::after {
+                content: "\f10e";
+                font-family: "FontAwesome";
+                position: absolute;
+                right: 19px;
+                @media screen and (min-width: 769px){
+                    top: 140px;
+                }
+            }
+        }
+
+        h4 {
+            font-family: $mont-bold;
+            font-size: 16px;
+        }
+
+        h5 {
+            font-family: $mont-reg;
+            font-size: 14px;
         }
     }
 }

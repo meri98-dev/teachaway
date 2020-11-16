@@ -44,7 +44,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="col-12">
 						<div class="row">
 							<?php while(have_rows('university_repeater')):the_row();?>
-								<div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 ">
+								<div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 col-xs-12">
 									<div class="university">
 										<div class="col-12">
 											<div class="data">
@@ -174,13 +174,35 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- 	End Courses  Section  -->	
+			
+			<!-- 	End Courses  Section  -->	
+
+			<section class="testimonials-tefl">
+				<div class="row">
+					<div class="col-12">
+						<div class="testimonial">
+							<div class="row">
+								<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+									<?php $testimonial_img = get_field('image'); ?>
+									<img src="<?php echo $testimonial_img['url'] ?>" alt="">
+								</div>
+								<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+									<div class="testimonial-information">
+										<p><?php the_field('description'); ?></p>
+										<h4> <?php the_field('name'); ?></h4>
+										<h5><?php the_field('location'); ?></h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
 
-	</div><!-- #fullpage-->
+		</div><!-- #fullpage-->
 
-</div><!-- .row end -->
+	</div><!-- .row end -->
 
 </div><!-- .container-fluid -->
 
