@@ -25,25 +25,57 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="site-footer" id="colophon">
 
-					<div class="site-info">
+					<div class="row top-footer">
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="slick-slider">
+								<?php
+								$args = array(
+									'post_type' => 'post'
+								);
 
-						<?php understrap_site_info(); ?>
+								$post_query = new WP_Query($args);
 
-					</div><!-- .site-info -->
+								if($post_query->have_posts() ) {
+									while($post_query->have_posts() ) {
+										$post_query->the_post();
+										?>
+										<div class="slick-item">
+											<h5><?php the_title(); ?></h5>
+										</div>
 
-				</footer><!-- #colophon -->
+										<?php
+									}
+								}
+								?>
+							</div>
 
-			</div><!--col end -->
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							
 
-		</div><!-- row end -->
+							<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
 
-	</div><!-- container end -->
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
 
-</div><!-- wrapper end -->
+							</div>
+						</div>
+
+					</footer><!-- #colophon -->
+
+				</div><!--col end -->
+
+			</div><!-- row end -->
+
+		</div><!-- container end -->
+
+	</div><!-- wrapper end -->
 
 </div><!-- #page we need this extra closing tag here -->
 
 <?php wp_footer(); ?>
+
+
 
 </body>
 

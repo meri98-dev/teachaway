@@ -63,3 +63,11 @@ add_action( 'after_setup_theme', 'register_menu' );
 function register_menu() {
 	register_nav_menu( 'footer_menu', __( 'Footer Menu', 'theme-slug' ) );
 }
+
+
+
+function wpdocs_scripts_method() {
+	wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/js/app.js', 1.12, array( 'jquery' ), true , 11);
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_scripts_method', 20, 1 );
+wp_enqueue_script( 'slick-script', get_template_directory_uri() . '/js/slick.min.js', array ( 'jquery' ), 1.1, true);
