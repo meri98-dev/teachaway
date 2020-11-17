@@ -3,16 +3,36 @@
         height: 80px;
 
         .container {
+            position: relative;
+
             a {
                 img {
-                    max-width: 35% !important;
 
-                    @include media-breakpoint-up(md) {
+                    @media screen and (max-width: 768px) {
+                        max-width: 25%;
+                        padding: 0;
                         position: absolute;
-                        top: 0;
+                        left: 72px;
+                        top: 3px;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        position: absolute;
+                        top: -14px;
                         left: 0;
                         max-width: 10% !important;
                         padding: 10px;
+
+
+                    }
+
+
+                    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+                        position: fixed;
+                        max-width: 20%;
+                        top: 9px;
+                        margin-left: 1em;
                     }
                 }
             }
@@ -21,37 +41,238 @@
                 color: $boulder;
                 font-family: $mont-med;
                 font-weight: 300;
+
+                &:hover {
+                    @include media-breakpoint-up(md) {
+                        color: $black;
+                        border-bottom: 4px solid $apple;
+                    }
+
+                }
+            }
+
+            #navbarNavDropdown {
+                flex-grow: 0;
+                z-index: 99999999;
+
+                .navbar-nav {
+                    background-color: $primary;
+                    width: 100%;
+
+                    @include media-breakpoint-down(md) {
+                        padding: 60px;
+
+                    }
+
+                    .menu-item {
+                        .dropdown-toggle[aria-expanded="true"]::after {
+                            content: "\f0d8";
+                            font-family: FontAwesome;
+                            border: none;
+                        }
+                    }
+
+                    .show {
+                        @include media-breakpoint-up(md) {
+                            display: flex;
+
+                        }
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        li {
+
+                            a {
+                                font-family: $mont-bold;
+                                font-size: 12px;
+                                line-height: 21px;
+                            }
+                        }
+
+                        //Icons before menu items in small device
+                        li:nth-child(1) {
+                            a {
+                                content: '';
+
+                                &::before {
+                                    content: url('http://local.teachaway.com/wp-content/uploads/2020/11/bag4.svg');
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: 20px;
+                                    background-size: 100%;
+                                    position: relative;
+                                    top: 5px;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+
+                        li:nth-child(2) {
+                            a {
+                                content: '';
+
+                                &::before {
+                                    content: url('http://local.teachaway.com/wp-content/uploads/2020/11/tefl3.svg');
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: 20px;
+                                    background-size: 100%;
+                                    position: relative;
+                                    top: 5px;
+                                    margin-right: 15px;
+
+                                }
+                            }
+                        }
+
+                        li:nth-child(3) {
+                            a {
+                                content: '';
+
+                                &::before {
+                                    content: url('http://local.teachaway.com/wp-content/uploads/2020/11/tcp.svg');
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: 20px;
+                                    background-size: 100%;
+                                    position: relative;
+                                    top: 5px;
+                                    margin-right: 15px;
+
+                                }
+                            }
+                        }
+
+                        li:nth-child(4) {
+                            a {
+                                content: '';
+
+                                &::before {
+                                    content: url('http://local.teachaway.com/wp-content/uploads/2020/11/hat4.svg');
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: 20px;
+                                    background-size: 100%;
+                                    position: relative;
+                                    top: 5px;
+                                    margin-right: 15px;
+
+                                }
+                            }
+                        }
+
+                        li:nth-child(5) {
+                            a {
+                                content: '';
+
+                                &::before {
+                                    content: url('http://local.teachaway.com/wp-content/uploads/2020/11/person3.svg');
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: 20px;
+                                    background-size: 100%;
+                                    position: relative;
+                                    top: 5px;
+                                    margin-right: 15px;
+
+                                }
+                            }
+                        }
+
+                        .menu-item {
+                            a[data-toggle="dropdown"]::after {
+                                content: '\f054';
+                                font-family: 'FontAwesome';
+                                border: none;
+                                margin-left: 15.255em;
+                                margin-top: .5em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .navbar-toggler {
+
+                .navbar-toggler-icon {
+                    content: '';
+
+                    &::after {
+                        content: '\f0c9';
+                        font-family: 'FontAwesome';
+                        color: $boulder;
+                        font-size: 20px;
+                    }
+
+                }
+
+            }
+
+            .navbar-toggler[aria-expanded="true"] {
+                .navbar-toggler-icon {
+                    content: '';
+
+                    &::after {
+                        content: '\f00d';
+                        font-family: 'FontAwesome';
+                        color: $boulder;
+                        font-size: 20px;
+                        font-weight: 100;
+                    }
+                }
+            }
+
+            .header-buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+
+                @include media-breakpoint-down(md) {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+
+
+                .cta-button {
+
+                    text-transform: uppercase;
+                    padding: 7.5px 20px;
+                    transition: all .3s ease;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    font-family: $mont-bold;
+                    font-size: 12px;
+                    border-radius: 5px;
+
+
+                    @include media-breakpoint-down(sm) {
+                        padding: 4px 6px;
+                    }
+
+                }
+
+                .cta-green {
+
+                    background-color: $apple;
+                    color: $primary;
+                    border: 1.5px solid $apple;
+                    box-shadow: 1px 2px 2px 0px $gainsboro;
+
+                }
+
+                .cta-white {
+                    background-color: $primary;
+                    color: $grey;
+                }
             }
         }
 
 
+
     }
 
-    
-    
 
-    .dropdown-toggle[aria-expanded="true"], .dropdown:hover{
-        content: '';
-        .dropdown-menu{
-            display: flex;
-            margin-top: 1em;
-        }
-    }
-    .dropdown-menu{
-        display: flex;
-    }
-    .dropdown-toggle[aria-expanded="true"]::before{
-        content: '';
-    }
-    .dropdown-toggle[aria-expanded="true"]::after {
-        content: "\f0d8";
-        font-family: FontAwesome;
-        border:none;
-    }
-    
-    .dropdown-toggle:hover::after{
-        content: "\f0d8";
-        font-family: FontAwesome;
-        border:none;
-    }
+
 }
