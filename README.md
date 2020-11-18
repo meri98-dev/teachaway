@@ -3,20 +3,26 @@ Coding Challenge
 
 To install Coding Challenge on your local computer please follow this instructions:
 
----Part One--- Getting Project Files
+---Part One--- 
+	
+	##Getting Project Files
 
 1. Copy the URL of the repository. In this case the URL is https://github.com/meri98-dev/teachaway.git
 2. On your web server folder open command prompt
 3. On the command line write the following command: git clone https://github.com/meri98-dev/teachaway.git
 
----Part Two--- Connecting with database
+---Part Two--- 
+	
+	##Connecting with database
 
 4. After the process is done open your web server database for example localhost/phpmyadmin
 5. Create a database for example teachaway
 6. Go to the database you just created -> Import -> Choose File -> Go (teachaway.sql should be uploaded)
 7. On the files in the folder teachaway go to teachaway/wp-config.php and enter database name, username and password according to your local computer data.
 
----Part Three--- Setting up Virtual Host 
+---Part Three--- 
+
+	##Setting up Virtual Host 
 
 7. Setting up Virtual Host for our project.
 8. Open Run and enter the following path C:\xampp\apache\conf\extra\httpd-vhosts.conf
@@ -40,7 +46,9 @@ To install Coding Challenge on your local computer please follow this instructio
 13. Save this file. If it cannot be saved you should run the file as administrator before making this change.
 14. Restart the computer
 
----Part Four --- Activating theme and plugins
+---Part Four --- 
+
+	##Activating theme and plugins
 
 15. On you browser enter the URL you decided for your website, in our case local.teachaway.com
 16. Go to local.teachaway.com/wp-admin and enter the following credentials 
