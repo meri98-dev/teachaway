@@ -33,8 +33,10 @@ To install Coding Challenge on your local computer please follow this instructio
 
 10. Save this and open Run. Enter the following path C:\Windows\System32\drivers\etc
 11. Open file hosts with Notepad 
-12. Enter the IP adress and the host name (they should be seperated at lease by one space)
-    for example -  127.0.0.1	local.teachaway.com  
+12. Enter the IP adress and the host name. Each entry should be kept on an individual line. 
+    The IP address should be placed in the first column followed by the corresponding host name. 
+    The IP address and the host name should be separated by at least one space.
+    Exp:    127.0.0.1	local.teachaway.com  
 13. Save this file. If it cannot be saved you should run the file as administrator before making this change.
 14. Restart the computer
 
