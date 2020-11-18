@@ -17,6 +17,7 @@
         font-family: $mont-bold;
         color: $white;
         margin-bottom: 76%;
+        padding: 20px;
 
         h1 {
             font-size: 32px;
@@ -29,6 +30,7 @@
         @include media-breakpoint-up(sm) {
             text-align: center;
             margin-bottom: 10%;
+            padding: 231px;
 
             h1 {
                 font-size: 42px;

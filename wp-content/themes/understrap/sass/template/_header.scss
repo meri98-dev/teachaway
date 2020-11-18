@@ -4,7 +4,7 @@
 
         .container {
             position: relative;
-
+            //Fixing image in different screens
             a {
                 img {
 
@@ -22,16 +22,14 @@
                         left: 0;
                         max-width: 10% !important;
                         padding: 10px;
-
-
                     }
 
 
                     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
-                        position: fixed;
+                        position: absolute;
                         max-width: 20%;
-                        top: 9px;
+                        top: -4px;
                         margin-left: 1em;
                     }
                 }
@@ -54,17 +52,15 @@
             #navbarNavDropdown {
                 flex-grow: 0;
                 z-index: 99999999;
-
                 .navbar-nav {
                     background-color: $primary;
                     width: 100%;
-
                     @include media-breakpoint-down(md) {
                         padding: 60px;
-
                     }
-
                     .menu-item {
+
+                        //when menu item is clicked caret down changes to caret up
                         .dropdown-toggle[aria-expanded="true"]::after {
                             content: "\f0d8";
                             font-family: FontAwesome;
@@ -73,9 +69,18 @@
                     }
 
                     .show {
+                        border: none;
+                        //dispaly menu items flex, default is block
                         @include media-breakpoint-up(md) {
                             display: flex;
-
+                        }
+                        .menu-item>.dropdown-item {
+                            font-family: $mont-med;
+                           &:hover {
+                                color: $black;
+                                border-bottom: 4px solid $apple;
+                                background-color: $white;
+                            }
                         }
                     }
 
@@ -146,7 +151,6 @@
                         li:nth-child(4) {
                             a {
                                 content: '';
-
                                 &::before {
                                     content: url('http://local.teachaway.com/wp-content/uploads/2020/11/hat4.svg');
                                     display: inline-block;
@@ -164,7 +168,6 @@
                         li:nth-child(5) {
                             a {
                                 content: '';
-
                                 &::before {
                                     content: url('http://local.teachaway.com/wp-content/uploads/2020/11/person3.svg');
                                     display: inline-block;
@@ -179,6 +182,15 @@
                             }
                         }
 
+                        li>ul>li>a {
+
+                            &::before {
+                                content: none !important;
+                            }
+
+                        }
+
+                        //On small device, adds the chevron-righ icon on a menu item that is a dropdown
                         .menu-item {
                             a[data-toggle="dropdown"]::after {
                                 content: '\f054';
@@ -192,8 +204,8 @@
                 }
             }
 
+            //replacing the default hamburger icon with fa fa bars
             .navbar-toggler {
-
                 .navbar-toggler-icon {
                     content: '';
 
@@ -208,6 +220,7 @@
 
             }
 
+            //Replacing hamburger icon with X icon
             .navbar-toggler[aria-expanded="true"] {
                 .navbar-toggler-icon {
                     content: '';
@@ -222,6 +235,7 @@
                 }
             }
 
+            //Buttons in Header
             .header-buttons {
                 display: flex;
                 justify-content: center;
@@ -269,10 +283,6 @@
             }
         }
 
-
-
     }
-
-
 
 }
